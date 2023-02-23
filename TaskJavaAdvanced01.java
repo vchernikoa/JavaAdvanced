@@ -13,7 +13,7 @@ import java.util.Scanner;
 /**
  * @author Chernikova Veronika
  */
-public class Main {
+public class TaskJavaAdvanced01 {
 
     public static void main(String[] args) {
         //Переменные
@@ -54,5 +54,4 @@ public class Main {
         }
         scanner.close();
     }
-
 }
