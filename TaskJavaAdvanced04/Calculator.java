@@ -7,6 +7,7 @@ public class Calculator {
     private double operandOne;
     private double operandTwo;
     private String operation;
+    private double result;
 
     public Calculator(double operandOne, double operandTwo, String operation) {
         this.operandOne = operandOne;
@@ -15,23 +16,27 @@ public class Calculator {
         operationSelection(this.operation);
     }
 
-    public void operationSelection (String operation){
-        switch (operation){
+    public double getResult() {
+        return result;
+    }
+
+    public void operationSelection(String operation) {
+        switch (operation) {
             case "+":
                 Adding add = new Adding();
-                System.out.println ("Result = " + add.result(operandOne, operandTwo));
+                result = add.result(operandOne, operandTwo);
                 break;
-            case  "-":
+            case "-":
                 Subtracting sub = new Subtracting();
-                System.out.println("Result = " + sub.result(operandOne, operandTwo));
+                result = sub.result(operandOne, operandTwo);
                 break;
-            case "*" :
+            case "*":
                 Multiplying mul = new Multiplying();
-                System.out.println("Result = " + mul.result(operandOne, operandTwo));
+                result = mul.result(operandOne, operandTwo);
                 break;
             case "/":
                 Dividing div = new Dividing();
-                System.out.println("Result = " + div.result(operandOne, operandTwo));
+                result = +div.result(operandOne, operandTwo);
                 break;
             default:
                 System.out.println("Error. You entered an invalid operator ");
