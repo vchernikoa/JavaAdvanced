@@ -3,6 +3,8 @@ import Operation.Dividing;
 import Operation.Multiplying;
 import Operation.Subtracting;
 
+import java.util.InputMismatchException;
+
 public class Calculator {
     private double operandOne;
     private double operandTwo;
@@ -20,7 +22,7 @@ public class Calculator {
         return result;
     }
 
-    public void operationSelection(String operation) {
+    public void operationSelection(String operation) throws InputMismatchException {
         switch (operation) {
             case "+":
                 Adding add = new Adding();
@@ -39,7 +41,7 @@ public class Calculator {
                 result = +div.result(operandOne, operandTwo);
                 break;
             default:
-                System.out.println("Error. You entered an invalid operator ");
+                new InputMismatchException("Error. You entered an invalid operator");
         }
     }
 }
