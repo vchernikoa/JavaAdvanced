@@ -16,6 +16,7 @@ public class TaskJavaAdvanced04 {
         operator = scanner.nextLine();
 
         Calculator calc = new Calculator(operandOne, operandTwo, operator);
+        System.out.println(calc.getResult());
 
 
     }
