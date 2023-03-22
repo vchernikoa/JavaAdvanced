@@ -2,7 +2,7 @@ package Operation;
 
 public class Subtracting implements Operation{
     @Override
-    public int result(int operandOne, int operandTwo) {
+    public double result(double operandOne, double operandTwo) {
         return operandOne - operandTwo;
     }
 }

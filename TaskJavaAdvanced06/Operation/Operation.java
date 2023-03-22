@@ -1,5 +1,5 @@
 package Operation;
 
 public interface Operation {
-    int result (int operandOne, int operandTwo);
+    double result (double operandOne, double operandTwo);
 }
